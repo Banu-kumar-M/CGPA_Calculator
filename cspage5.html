@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>SGPA calculator </title>
+<link rel="stylesheet" href="cspage05.css ">
+<script src="cspage05.js" ></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/calculator-1.png" height="35px" width="35px">
+            </div>
+            <div class="logoname">
+                SGPA CALCULATOR
+            </div>
+            <ul>
+                <li><a href="cpga.html">CGPA Calculator</a></li>
+                <li><a href="cspage.html">SGPA Calculator</a></li>
+                <li><a href="show.html">Results</a></li>
+                <li><a href="login.html">Logout</a></li>
+                  
+            </ul>
+        </nav
+    </header>
+    <script>
+        window.addEventListener('load',()=>{
+        var name=localStorage.getItem("NAME");
+        document.getElementById("username").value= name;
+
+    })
+        
+
+
+    </script>
+     <form action="insertdata.php" method="POST">
+    <div class="h1">Computer Science Engineering</div>
+    <div class="h2" id="semname">8TH SEMESTER</div>
+    
+  <p class= "h3">Welcome </p>
+  <input type="text" id ="username" name="uname2" class ="h4">
+
+    
+    <div class="t" >
+            <p >Subject Code</p>
+            <p class="p1">Subject Name</p>
+            <p class="p2">Total Marks</p>
+            <p class="p3">Credits</p>
+            <p class="p4">Grade</p>
+            <p class="p5">Results</p>
+            <p class="p6" id="resu"></p>
+    </div>
+   
+    <div class="box1" id="b">
+        <p class="no" id="code1">18CS81</p>
+        <p class="subject" id="sub1">INTERNET OF THINGS</p>
+       
+        <input type="text" id="s1" onclick="javascript:cal()"  class="input"  autocomplete="OFF" name="sub1">
+        <input type="text" id="c1" class="input1">
+        <input type="text" id="g1" class="input2">
+    </div>
+    <div class="box1" id="b">
+        <p class="no" id="code2">18CS82X</p>
+        <p class="subject" id="sub2">PROFESSIONAL ELECTIVE-4</p>
+        <input type="text"  id="s2" onclick="javascript:cal()" class="input" autocomplete="OFF"  name="sub2">
+        <input type="text"  id="c2" class="input1">
+        <input type="text" id="g2" class="input2">
+    </div>
+    <div class="box1" id="b">
+        <p class="no" id="code3">18CS83</p>
+        <p class="subject" id="sub3">PROJECT WORK PHASE-2</p>
+        <input type="text" id="s3" onclick="javascript:cal()" class="input" autocomplete="OFF" name="sub3">
+        <input type="text" id="c3" class="input1">
+        <input type="text" id="g3" class="input2">
+    </div>
+    <div class="box1" id="b">
+        <p class="no" id="code4">18CSS84</p>
+        <p  class="subject" id="sub4">TECHNICAL SEMINAR</p>
+        <input type="text"  id="s4"onclick="javascript:cal()"  class="input" autocomplete="OFF" name="sub4">
+        <input type="text" id="c4" class="input1">
+        <input type="text" id="g4" class="input2">
+    </div>
+   
+    
+    <div class="box1" id="b">
+        <p class="no" id="code8">18CS185</p>
+        <p class="subject" id="sub8">INTERNSHIP</p>
+        <input type="text"  id="s5" onclick="javascript:cal()" class="input" autocomplete="OFF" name="sub5">
+        <input type="text" id="c5" class="input1">
+        <input type="text" id="g5" class="input2">
+    </div>
+
+    
+    <div class="result" id="re">
+    <div class="total">
+        <p class="no1">Total Marks :</p>
+        <input type="text" id="total"  class="input2" name="tm">
+    </div>
+    <div class="per">
+        <p class="no1">Percentage %:</p>
+        <input type="text" id="per" class="input2" name="p">
+    </div>
+    <div class="cgpa">
+        <p class="no1">SGPA:</p>
+        <input type="text" id="sgpa" class="input2" name="s">
+    </div>
+    </div>
+    <div class="button" onclick="javascript:sgpa()"><a href="#" class="button1" onclick="javascript:sgpa()" >CALCULATE</a></div>
+ 
+    <div class="sem">
+        <div class="button2" ><a href="cspage.html" class="button1" ">1ST SEM</a></div>
+        <div class="button3" ><a href="#" class="button1" >2ND SEM</a></div>
+        <div class="button4"><a href="cspage2.html" class="button1">3RD SEM</a></div>
+        <div class="button5"><a href="#" class="button1">4TH SEM</a></div>
+        <div class="button6"><a href="#" class="button1">5TH SEM</a></div>
+        <div class="button7"><a href="cspage3.html" class="button1">6TH SEM</a></div>
+        <div class="button8"><a href="cspage4.html" class="button1">7TH SEM</a></div>
+        <div class="button9"><a href="#" class="button1">8TH SEM</a></div>
+        <button type="submit" class="button10" >Upload</button>
+    </div>
+</form>  
+
+</body>
+<html>
+

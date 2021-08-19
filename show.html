@@ -1,0 +1,30 @@
+
+<html>
+
+    <link rel="stylesheet" href="show.css">
+    <body>
+
+
+        <script>
+            window.addEventListener('load',()=>{
+            var name=localStorage.getItem("NAME");
+            document.getElementById("username").value= name;
+        
+        })
+            
+        
+        
+        </script>
+<form action="viewresult.php" method ="POST">
+<div class="box">
+    <input type="text" id ="username" name="uname2" class ="h4">
+    <p class= "h3">Click here to view results</p>
+
+<button type=submit  class="button">View Result</button>
+</div> 
+</form>
+
+    </body>
+</html>
+
+

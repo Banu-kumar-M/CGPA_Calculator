@@ -1,0 +1,74 @@
+<html>
+<head>
+<link rel="stylesheet"  href="login.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<title>login</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/calculator-1.png" height="35px" width="35px">
+        </div>
+        <div class="logoname">
+            SGPA CALCULATOR
+        </div>
+        <ul>
+            <li><a href="#">CGPA Calculator</a></li>
+                <li><a href="#">SGPA Calculator</a></li>
+                <li><a href="#">Results</a></li>
+                <li><a href="#">Logout</a></li>
+                
+        </ul>
+    </nav>
+    <figure class="login">
+        <img src="images/log.jpg" width="850px" height="100%">
+    </figure>
+
+    <div class="wall">
+        <div class="box">
+            <div class="welcome"><p>Welcome</p></div>
+        <div class="b">
+        
+        
+        <a type="button" class="toggle" onclick="login()">Login</a>
+        <a type="button" class="toggle1" onclick="register()">Register</a>
+        </div>
+        <form id="login" class="input" method="post" action="login.php">
+        <input type="text" class="inputfield"  placeholder="User id" name="username1" required id="username"  autocomplete="OFF" onclick="send()">
+        <input type="text" class="inputfield"  placeholder="Enter password" name="password1"  autocomplete="OFF" required>
+        <input type="submit" class="button" value="Login"  onclick="send()" >
+        </form>
+        <form id="register" class="input"  method='post' action="register.php">
+        <input type="text" id="name" class="inputfield"  placeholder="User name" name="firstname"  autocomplete="OFF" required>
+        <input type="text" id="email" class="inputfield"  placeholder="Email id" name="email"   autocomplete="OFF" required>
+        <input type="text" id="pass" class="inputfield"   placeholder="Enter password" name="password"  autocomplete="OFF" required>
+        <input type="submit" class="button" value="Register">
+        </div>
+        </div>
+<script>
+var x=document.getElementById("login");
+var y=document.getElementById("register");
+var z=document.getElementById("btn");
+function register()
+{
+x.style.left="-400px";
+y.style.left="50px";
+z.style.left="110px";
+} 
+function login()
+{
+x.style.left="50px";
+y.style.left="400px";
+z.style.left="0";
+}
+function send()
+{
+    var name=document.getElementById("username").value;
+    localStorage.setItem("NAME", name);
+    return;
+
+}
+</script>
+
+</body>
+</html>
